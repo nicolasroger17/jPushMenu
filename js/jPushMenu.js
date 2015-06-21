@@ -31,10 +31,10 @@
 				target = '.cbp-spmenu-bottom';
 			}
 
-			if (o.topDistance || o.bottomDistance) {
+			if (o.topDistance !== 0 || o.bottomDistance !== 0) {
 				target.css({
-					"height": "calc(100% - " + (o.topDistance + o.bottomDistance) + ")",
-					"top": o.topDistance
+					"height": "calc(100% - " + (o.topDistance + o.bottomDistance) + "px)",
+					"top": o.topDistance + "px"
 				})
 			}
 
