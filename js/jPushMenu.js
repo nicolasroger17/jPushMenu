@@ -15,6 +15,13 @@
 
 		$('body').addClass(o.bodyClass);
 		$(this).addClass('jPushMenuBtn');
+
+		if (o.topDistance !== 0 || o.bottomDistance !== 0) {
+			$(".cbp-spmenu").css({
+				"height": "calc(100% - " + (o.topDistance + o.bottomDistance) + "px)",
+				"top": o.topDistance + "px"
+			})
+		}
 		$(this).click(function() {
 			var target = '',
 				push_direction = '';
@@ -29,13 +36,6 @@
 				target = '.cbp-spmenu-top';
 			} else if ($(this).is('.' + o.showBottomClass)) {
 				target = '.cbp-spmenu-bottom';
-			}
-
-			if (o.topDistance !== 0 || o.bottomDistance !== 0) {
-				target.css({
-					"height": "calc(100% - " + (o.topDistance + o.bottomDistance) + "px)",
-					"top": o.topDistance + "px"
-				})
 			}
 
 			$(this).toggleClass(o.activeClass);
