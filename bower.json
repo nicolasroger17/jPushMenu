@@ -1,6 +1,6 @@
 {
-  "name": "jPushMenu-n",
-  "version": "1.0.0",
+  "name": "jPushMenu",
+  "version": "1.1.1",
   "main": [
   	"js/jPushMenu.js"
   ],
