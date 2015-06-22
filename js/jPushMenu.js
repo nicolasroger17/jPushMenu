@@ -82,6 +82,12 @@
 				jPushMenu.close();
 			});
 		}
+
+		if (o.closeOnScroll) {
+			$(window).scroll(function() {
+				jPushMenu.close();
+			});
+		}
 	};
 
 	/* in case you want to customize class name,
@@ -100,6 +106,7 @@
 		bottomDistance: 0,
 		closeOnClickOutside: true,
 		closeOnClickInside: true,
-		closeOnClickLink: true
+		closeOnClickLink: true,
+		closeOnScroll: true
 	};
 })(jQuery);
